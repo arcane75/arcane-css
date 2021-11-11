@@ -18,7 +18,7 @@ const Admin = () => {
     <div className="admin-container">
 
       <div className="row admin-container">
-        <div className="col-md-3 ">
+        <div className="col-md-3 admin-side">
           <div className="admin-area p-1">
             <h1>Dashboard</h1>
             <div className="all-menu mt-5">

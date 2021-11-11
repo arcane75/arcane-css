@@ -4,7 +4,13 @@
     height: 400px;
     margin-bottom: 400px;
 }
-.col-md-3{
+/* .col-md-3{
+    background: #ff9b00;
+    padding: 4%;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+} */
+.contact-img{
     background: #ff9b00;
     padding: 4%;
     border-top-left-radius: 0.5rem;

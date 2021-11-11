@@ -7,7 +7,7 @@ const Subscription = () => {
             <section className="subscription bg-white my-5">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-12">
+                        <div className="col-lg-12 col-md-12 col-sm-12">
                             <div className="subscription-wrapper">
                                 <div className="d-flex subscription-content justify-content-between align-items-center flex-column flex-md-row text-center text-md-left">
                                     <h3 className="flex-fill">Subscribe <br /> to our newsletter</h3>

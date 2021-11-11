@@ -18,8 +18,8 @@ const SingleService = (props) => {
                         {/* <Link to="/details">
                             <Button className="btn btn-sm btn-warning">Explore item</Button>
                         </Link> */}
-
-                        <Link to={`/orderReview/${_id}`}>
+                        {/* {`/orderReview/${_id}`} */}
+                        <Link to='/orderReview'>
                             <Button className="btn-sm btn btn-warning" onClick={() => props.handleAddToCart(props.service)}>Purchase</Button>
                         </Link>
 

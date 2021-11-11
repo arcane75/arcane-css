@@ -25,7 +25,7 @@ const AddPackage = () => {
     return (
         <div>
 
-            <section className="vh-100" style={{ backgroundColor: "#eee" }}>
+            <section className="" style={{ backgroundColor: "#eee" }}>
                 <div className="container h-100">
                     <div className="row d-flex justify-content-center align-items-center h-100">
                         <div className="col-lg-12 col-xl-11">
@@ -43,7 +43,7 @@ const AddPackage = () => {
                                                     <div className="form-outline flex-fill mb-0">
                                                         <input
                                                             {...register("name")}
-                                                            placeholder="Package Name"
+                                                            placeholder="Product Name"
                                                             className="p-2 m-2 w-100"
                                                         />
                                                     </div>
@@ -54,7 +54,7 @@ const AddPackage = () => {
                                                     <div className="form-outline flex-fill mb-0">
                                                         <input
                                                             {...register("price")}
-                                                            placeholder="Package Price"
+                                                            placeholder="Product Price"
                                                             className="p-2 m-2 w-100"
                                                         />
 

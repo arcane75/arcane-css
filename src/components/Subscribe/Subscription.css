@@ -15,11 +15,21 @@
     -webkit-transform: perspective(1800px) rotateY(20deg) skewY(1deg) translateX(50px);
     transform: perspective(1800px) rotateY(20deg) skewY(1deg) translateX(50px);
     padding: 70px 50px;
-    width: 80%;
+    width: 100%;
     background: linear-gradient(80deg, #0030cc 0%, #00a4db 100%);
     top: 100px
 }
-
+@media screen and (max-width:600px){
+    .subscription-wrapper {
+        border-radius: 0% 5% 10% 3%/10% 20% 0% 17%;
+        -webkit-transform: perspective(1800px) rotateY(20deg) skewY(1deg) translateX(50px);
+        transform: perspective(1800px) rotateY(20deg) skewY(1deg) translateX(50px);
+        padding: 70px 50px;
+        width: 80%;
+        background: linear-gradient(80deg, #0030cc 0%, #00a4db 100%);
+        top: 100px
+    }
+}
 .subscription-wrapper {
     box-shadow: 0px 15px 39px 0px rgba(8, 18, 109, 0.1) !important
 }

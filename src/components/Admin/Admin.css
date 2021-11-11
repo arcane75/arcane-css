@@ -12,4 +12,9 @@
   .admin-menu:hover {
     color:orange;
   }
-  
+  .admin-side{
+    background: #ff9b00;
+    padding: 4%;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }

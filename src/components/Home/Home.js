@@ -1,5 +1,6 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
+import CaroselReview from '../CaroselReview/CaroselReview';
 import ServiceHome from '../Services/ServiceHome';
 import Subscription from '../Subscribe/Subscription';
 import './Home.css';
@@ -24,6 +25,7 @@ const Home = () => {
 
             </div>
             <ServiceHome></ServiceHome>
+            <CaroselReview></CaroselReview>
             <Subscription></Subscription>
         </div>
     );

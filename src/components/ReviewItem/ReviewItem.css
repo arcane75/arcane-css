@@ -5,3 +5,6 @@
 .description{
     text-align: justify;
 }
+.product img{
+    height: 200px;
+}

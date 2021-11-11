@@ -7,7 +7,7 @@ const ContactUs = () => {
 
             <div className="container contact">
                 <div className="row">
-                    <div className="col-md-3">
+                    <div className="col-md-3 contact-img">
                         <div className="contact-info">
                             <img src="https://image.ibb.co/kUASdV/contact-image.png" alt="" />
                             <h2>Contact Us</h2>

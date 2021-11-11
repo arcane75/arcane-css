@@ -1,5 +1,5 @@
 .shipping-form{
-    margin:30px 150px;
+    margin:30px 80px;
 }
 .shipping-form input {
     display: block;
@@ -11,4 +11,18 @@
 }
 .error{
     color: red;
+}
+
+@media screen and (max-width:600px){
+    .shipping-form{
+        margin:10px 30px;
+    }
+    .shipping-form input {
+        display: block;
+        margin-top: 30px;
+        padding: 5px;
+        border: 1px solid gray;
+        border-radius: 5px;
+        width: 200px;
+    }
 }
