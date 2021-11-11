@@ -8,7 +8,7 @@ const AddPackage = () => {
 
     const onSubmit = (data) => {
         data.email = user?.email;
-        fetch("https://secret-oasis-75904.herokuapp.com/addPackage", {
+        fetch("http://localhost:5000/addProduct", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
@@ -17,10 +17,8 @@ const AddPackage = () => {
             .then((result) => {
                 alert('added successfully');
                 reset();
-                console.log(result)
-
             });
-        console.log(data);
+        // console.log(data);
     };
     return (
         <div>

@@ -7,9 +7,8 @@ const ManageAllOrder = () => {
     const [status, setStatus] = useState('');
     const [control, setConrol] = useState(false);
 
-
     useEffect(() => {
-        fetch("https://secret-oasis-75904.herokuapp.com/allOrder")
+        fetch("http://localhost:5000/allOrder")
             .then((res) => res.json())
             .then((data) => setOrder(data));
     }, [control]);
@@ -17,7 +16,7 @@ const ManageAllOrder = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            fetch(`https://secret-oasis-75904.herokuapp.com/deletePackage/${id}`, {
+            fetch(`http://localhost:5000/deletePackage/${id}`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" },
             })
@@ -32,29 +31,24 @@ const ManageAllOrder = () => {
         }
     }
 
-
-
     const handleStatus = (id) => {
-        const newStatus = { status: 'Approved' };
+        const newStatus = { status: 'Shipped' };
         setStatus(newStatus);
-        fetch(`https://secret-oasis-75904.herokuapp.com/updateStatus/${id}`, {
+        fetch(`http://localhost:5000/updateStatus/${id}`, {
             method: "PUT",
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(status)
-
         })
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount > 0) {
                     alert('Updated Successfully');
-                    //setStatus(data);
-                    // setConrol(!control);
+                    setConrol(!control);
                 }
             })
     }
-
 
     return (
         <div className="container">

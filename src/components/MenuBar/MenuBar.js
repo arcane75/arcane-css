@@ -20,15 +20,10 @@ const MenuBar = () => {
 
 
                             <NavLink className="pe-5 ps-3 item" to="/home"><i className="fas fa-home"></i> Home</NavLink>
-
-                            {/* <NavLink className="pe-5 item" to="/myOrder"><i className="fas fa-user"></i> My Order</NavLink> */}
-
+                            <NavLink className="pe-5 ps-3 item" to="/explore"><i class="fas fa-x-ray"></i> Explore</NavLink>
+                      
                             <NavLink className="pe-5 item" to="/admin"><i className="fas fa-tasks"></i> Dashboard</NavLink>
-                            {/* 
-                            <NavLink className="pe-5 item" to="/contact"><i className="fas fa-envelope"></i> Contact</NavLink>
-
-                            <NavLink className="pe-5 item" to="/about"><i className="far fa-calendar-check"></i> About Us</NavLink> */}
-
+    
 
                             {(user?.email) ?
 

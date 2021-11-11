@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Table } from 'react-bootstrap';
-import useFirebase from '../../hooks/useFirebase';
 import './MyOrder.css';
+import useAuth from '../../hooks/useAuth';
 
 const MyOrder = () => {
-    const { user } = useFirebase();
+    const { user } = useAuth();
     const [order, setOrder] = useState([]);
     const [control, setConrol] = useState(false);;
 
     useEffect(() => {
-        fetch(`https://secret-oasis-75904.herokuapp.com/myOrder/${user?.email}`)
+        fetch(`http://localhost:5000/myOrder/${user?.email}`)
             .then((res) => res.json())
             .then((data) => setOrder(data));
     }, [user?.email]);
@@ -18,7 +18,7 @@ const MyOrder = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            fetch(`https://secret-oasis-75904.herokuapp.com/deletePackage/${id}`, {
+            fetch(`http://localhost:5000/deletePackage/${id}`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" },
             })
@@ -43,7 +43,7 @@ const MyOrder = () => {
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Package Title</th>
+                        <th>Product Title</th>
                         <th>Email</th>
                         <th>Address</th>
                         <th>Stutus</th>

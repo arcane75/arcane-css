@@ -17,7 +17,7 @@ const Shipping = () => {
         const savedCart = getStoredCart();
         data.order = savedCart;
 
-        fetch('https://secret-oasis-75904.herokuapp.com/order', {
+        fetch('http://localhost:5000/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -57,7 +57,7 @@ const Shipping = () => {
                                                 <input placeholder="Address" defaultValue="" {...register("address")} />
                                                 <input placeholder="City" defaultValue="" {...register("city")} />
                                                 <input placeholder="phone number" defaultValue="" {...register("phone")} />
-                                                <input placeholder="Destination" defaultValue="" {...register("Place")} />
+                                                <input placeholder="Product Name" defaultValue="" {...register("Place")} />
 
                                                 <input type="submit" />
                                             </form>
