@@ -39,7 +39,7 @@ const MenuBar = () => {
                                 </NavLink>
                             }
 
-                            <NavLink className="ps-5 item" to="/orderReview"><i class="fas fa-cart-arrow-down"></i> Cart</NavLink>
+                            <NavLink className="ps-5 item" to="/orderReview"><i className="fas fa-cart-arrow-down"></i> Cart</NavLink>
 
                         </Nav>
                     </Navbar.Collapse>

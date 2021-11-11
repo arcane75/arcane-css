@@ -4,97 +4,101 @@ import "./Footer.css";
 import logo from '../../images/logo.png';
 const Footer = () => {
   return (
-    <div className="footer-container">
-      <div className="row">
-        <div className="col-md-4 col-sm-12">
-          <div className="left-container text-start">
-            <h1>Arcane TraVio</h1>
-            <div>
-              <img className='image-fluid w-50 my-2' src={logo} alt="" />
-            </div>
-            <div className="icons-container d-flex text-center ">
 
-              <div className="icon">
-                <i className="fab fa-facebook-square fa-2x"></i>
-              </div>
-              <div className="icon">
-                <i className="fab fa-instagram-square fa-2x"></i>
-              </div>
-              <div className="icon">
-                <i className="fab fa-twitter-square fa-2x"></i>
-              </div>
-              <div className="icon">
-                <i className="fab fa-youtube-square fa-2x"></i>
-              </div>
-            </div>
-            <p className="mt-5">
-              <small>Arcane 2021 ©  All rights reserved.</small>
-            </p>
+<div className=" mt-5">
+
+<footer className="text-white text-center text-lg-start bg-dark">
+    
+    <div className="container p-4">
+      {/* <!--Grid row--> */}
+      <div className="row mt-4">
+        {/* <!--Grid column--> */}
+        <div className="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <h5 className="text-uppercase mb-4">About company</h5>
+
+          <p>
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+            voluptatum deleniti atque corrupti.
+          </p>
+
+          <p>
+            Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
+            molestias.
+          </p>
+
+          <div className="mt-4">
+            {/* <!-- Facebook --> */}
+            <Link type="button" className="btn btn-floating btn-light btn-lg"><i className="fab fa-facebook-f"></i></Link>
+            {/* <!-- Dribbble --> */}
+            <Link type="button" className="btn btn-floating btn-light btn-lg"><i className="fab fa-dribbble"></i></Link>
+            {/* <!-- Twitter --> */}
+            <Link type="button" className="btn btn-floating btn-light btn-lg"><i className="fab fa-twitter"></i></Link>
+            {/* <!-- Google + --> */}
+            <Link type="button" className="btn btn-floating btn-light btn-lg"><i className="fab fa-google-plus-g"></i></Link>
+            {/* <!-- Linkedin --> */}
           </div>
         </div>
+        {/* <!--Grid column--> */}
 
+        {/* <!--Grid column--> */}
+        <div className="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 className="text-uppercase mb-4 pb-1">Search something</h5>
 
-        <div className="col-md-4 col-sm-12">
-          <div className="">
-            <ul>
-
-              <li className="footer-menu">
-                <Link to="/home" className="item">
-                  Home
-                </Link>
-              </li>
-
-              <li className="footer-menu">
-                <Link to="/about" className="item">
-                  About
-                </Link>
-              </li>
-
-              <li className="footer-menu">
-                <Link to="/contact" className="item">
-                  Contact
-                </Link>
-              </li>
-
-              <li className="footer-menu">
-                <Link to="/admin" className="item">
-                  Admin
-                </Link>
-              </li>
-
-            </ul>
+          <div className="form-outline form-white mb-4">
+            <input type="text" id="formControlLg" className="form-control form-control-lg" />
+            <label className="form-label" for="formControlLg">Search</label>
           </div>
+
+          <ul className="fa-ul" style={{marginLeft: '1.65em'}}>
+            <li className="mb-3">
+              <span className="fa-li"><i className="fas fa-home"></i></span><span className="ms-2">Warsaw, 00-967, Poland</span>
+            </li>
+            <li className="mb-3">
+              <span className="fa-li"><i className="fas fa-envelope"></i></span><span className="ms-2">contact@example.com</span>
+            </li>
+            <li className="mb-3">
+              <span className="fa-li"><i className="fas fa-phone"></i></span><span className="ms-2">+ 48 234 567 88</span>
+            </li>
+          </ul>
         </div>
+        {/* <!--Grid column--> */}
 
+        {/* <!--Grid column--> */}
+        <div className="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 className="text-uppercase mb-4">Opening hours</h5>
 
-        <div className="col-md-4 col-sm-12">
-          <div className="">
-            <h3>Sign up for the newsletter</h3>
-            <br />
-            <input
-              className="footer-input"
-              type="text"
-              placeholder="Enter Email"
-            />
-            <div className="d-flex align-items-center justify-content-center mt-4">
-              <div>
-                <h5>+880 184 4476</h5>
-              </div>
-            </div>
-
-            <div className="d-flex align-items-center justify-content-center">
-              <div>
-                <p>
-                  160 Broadway, New York, NY 10038,
-                  <br /> 102 1st Avenue, New York, NY 100
-                </p>
-              </div>
-            </div>
-
-          </div>
+          <table className="table text-center text-white">
+            <tbody className="fw-normal">
+              <tr>
+                <td>Mon - Thu:</td>
+                <td>8am - 9pm</td>
+              </tr>
+              <tr>
+                <td>Fri - Sat:</td>
+                <td>8am - 1am</td>
+              </tr>
+              <tr>
+                <td>Sunday:</td>
+                <td>9am - 10pm</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+        {/* <!--Grid column--> */}
       </div>
-    </div >
+      {/* <!--Grid row--> */}
+    </div>
+    {/* <!-- Grid container --> */}
+
+    {/* <!-- Copyright --> */}
+    <div className="text-center p-3" style={{backgroundColor:' rgba(0, 0, 0, 0.2)'}}>
+      © 2021 Copyright: Arcane CSS
+    </div>
+    {/* <!-- Copyright --> */}
+  </footer>
+
+</div>
+
   );
 };
 
