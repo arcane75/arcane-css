@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
 import useCart from '../../hooks/useCart';
 import Cart from '../Cart/Cart';
 import ReviewItem from '../ReviewItem/ReviewItem';
@@ -9,14 +8,13 @@ import { useHistory } from 'react-router';
 const OrderReview = () => {
     const [cart, setCart] = useCart();
     const history = useHistory();
-    const { orderId } = useParams();
     const [details, setDetails] = useState({});
-
+    
     useEffect(() => {
-        fetch(`https://secret-oasis-75904.herokuapp.com/packages/${orderId}`)
+        fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => setDetails(data));
-    }, [orderId])
+    }, [])
 
     const handleRemove = key => {
         const newCart = cart.filter(product => product.key !== key);
@@ -30,7 +28,7 @@ const OrderReview = () => {
     // className="product-container"
     // className="cart-container"
     return (
-        <div className="container vh-100">
+        <div className="container">
            <div className="row">
            <div className="col-md-8">
                 {

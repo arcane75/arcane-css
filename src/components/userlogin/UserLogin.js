@@ -43,8 +43,8 @@ const UserLogin = () => {
     }
 
     const handleLoginSubmit = e => {
-        processLogin(loginData.email, loginData.password, location, history);
         registerNewUser(loginData.email, loginData.password, loginData.name, history);
+        processLogin(loginData.email, loginData.password, location, history);
         e.preventDefault();
     }
 

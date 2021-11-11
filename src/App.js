@@ -8,14 +8,14 @@ import UserLogin from './components/userlogin/UserLogin';
 import ContactUs from './components/ContactUs/ContactUs';
 import Error from './components/Error/Error';
 import AboutUs from './components/AboutUs/AboutUs';
-// import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import OrderReview from './components/OrderReview/OrderReview';
 import Shipping from './components/Shipping/Shipping';
-import AddPackage from './components/AddPackage/AddPackage';
-import ManageAllOrder from './components/ManageAllOrder/ManageAllOrder';
+// import AddPackage from './components/AddPackage/AddPackage';
+// import ManageAllOrder from './components/ManageAllOrder/ManageAllOrder';
 import Admin from './components/Admin/Admin';
 import Header from './components/Header/Header';
-import MyOrder from './components/MyOrder/MyOrder';
+// import MyOrder from './components/MyOrder/MyOrder';
 import Footer from './components/Footer/Footer';
 
 
@@ -39,9 +39,9 @@ function App() {
               <UserLogin></UserLogin>
             </Route>
 
-            <Route path='/myOrder'>
+            {/* <Route path='/myOrder'>
               <MyOrder></MyOrder>
-            </Route>
+            </Route> */}
 
             <Route path="/contact">
               <ContactUs></ContactUs>
@@ -51,7 +51,10 @@ function App() {
               <AboutUs></AboutUs>
             </Route>
 
-            <Route path='/orderReview/:orderId'>
+            {/* <Route path='/orderReview/:orderId'>
+              <OrderReview></OrderReview>
+            </Route> */}
+             <Route path='/orderReview/'>
               <OrderReview></OrderReview>
             </Route>
 
@@ -59,17 +62,17 @@ function App() {
               <Shipping></Shipping>
             </Route>
 
-            <Route path='/addpackage'>
+            {/* <Route path='/addpackage'>
               <AddPackage></AddPackage>
             </Route>
 
             <Route path='/allOrder'>
               <ManageAllOrder></ManageAllOrder>
-            </Route>
+            </Route> */}
 
-            <Route path="/admin">
+            <PrivateRoute path="/admin">
               <Admin></Admin>
-            </Route>
+            </PrivateRoute>
 
             <Route path="*">
               <Error></Error>

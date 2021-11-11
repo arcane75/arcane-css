@@ -10,7 +10,7 @@ const ServiceHome = () => {
     const [services, setServices] = useState([]);
     const [cart, setCart] = useCart();
     useEffect(() => {
-        fetch("https://secret-oasis-75904.herokuapp.com/packages")
+        fetch("http://localhost:5000/products")
             .then(res => res.json())
             .then(data => setServices(data));
     }, [])

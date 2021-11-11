@@ -1,9 +1,12 @@
 .home-service-container{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
     grid-gap: 40px;
     margin-left: 120px;
     margin-right: 120px;
+}
+.home-service:hover{
+    border: 1px solid aqua;
 }
 
 .home-service-container img{

@@ -15,9 +15,9 @@ const SingleService = (props) => {
                     <p>{description}</p>
                     <h2>Price: ${price} </h2>
                     <div>
-                        <Link to="/details">
+                        {/* <Link to="/details">
                             <Button className="btn btn-sm btn-warning">Explore item</Button>
-                        </Link>
+                        </Link> */}
 
                         <Link to={`/orderReview/${_id}`}>
                             <Button className="btn-sm btn btn-warning" onClick={() => props.handleAddToCart(props.service)}>Purchase</Button>
