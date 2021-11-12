@@ -4,11 +4,10 @@ import { Table } from "react-bootstrap";
 
 const ManageProducts = () => {
     const [allProducts, setAllProducts] = useState([]);
-    const [status, setStatus] = useState('');
     const [control, setConrol] = useState(false);
 
     useEffect(() => {
-        fetch("http://localhost:5000/explore")
+        fetch("https://immense-lowlands-25599.herokuapp.com/explore")
             .then((res) => res.json())
             .then((data) => setAllProducts(data));
     }, [control]);
@@ -16,7 +15,7 @@ const ManageProducts = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            fetch(`http://localhost:5000/deleteProduct/${id}`, {
+            fetch(`https://immense-lowlands-25599.herokuapp.com/deleteProduct/${id}`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" },
             })

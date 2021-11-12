@@ -17,7 +17,7 @@ const Shipping = () => {
         const savedCart = getStoredCart();
         data.order = savedCart;
 
-        fetch('http://localhost:5000/order', {
+        fetch('https://immense-lowlands-25599.herokuapp.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

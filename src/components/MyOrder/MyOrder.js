@@ -9,7 +9,7 @@ const MyOrder = () => {
     const [control, setConrol] = useState(false);;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrder/${user?.email}`)
+        fetch(`https://immense-lowlands-25599.herokuapp.com/myOrder/${user?.email}`)
             .then((res) => res.json())
             .then((data) => setOrder(data));
     }, [user?.email]);
@@ -18,7 +18,7 @@ const MyOrder = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            fetch(`http://localhost:5000/deletePackage/${id}`, {
+            fetch(`https://immense-lowlands-25599.herokuapp.com/deletePackage/${id}`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" },
             })

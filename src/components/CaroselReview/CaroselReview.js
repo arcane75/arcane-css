@@ -4,12 +4,12 @@ import Rating from 'react-rating';
 import Carousel from 'react-material-ui-carousel'
 import { CardMedia } from '@mui/material'
 import reviewImg from '../../images/review.jpg';
-
+import demo from '../../images/demo.png';
 const CaroselReview = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/reviews")
+        fetch("https://immense-lowlands-25599.herokuapp.com/reviews")
             .then(res => res.json())
             .then(data => setReviews(data));
     }, [])
@@ -29,8 +29,8 @@ const CaroselReview = () => {
                                 <CardMedia
                                     component="img"
                                     style={{ width: '150px', height: '150px', margin: 'auto' }}
-                                    image={review.img}
-                                    alt="green iguana"
+                                    image={review.img || demo}
+                                    alt="User Avatar"
                                 />
                                 <h3>{review.name}</h3>
                                 <Rating

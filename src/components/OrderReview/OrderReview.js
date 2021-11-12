@@ -11,7 +11,7 @@ const OrderReview = () => {
     const [details, setDetails] = useState({});
     
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://immense-lowlands-25599.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setDetails(data));
     }, [])

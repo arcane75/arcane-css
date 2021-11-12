@@ -4,11 +4,11 @@ import useAuth from '../../hooks/useAuth';
 import './ReviewRating.css';
 
 const ReviewRating = () => {
-    const { register, handleSubmit, reset} = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const { user } = useAuth();
 
     const onSubmit = (data) => {
-        fetch("http://localhost:5000/review", {
+        fetch("https://immense-lowlands-25599.herokuapp.com/review", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
@@ -44,30 +44,6 @@ const ReviewRating = () => {
                     </div>
                 </div>
             </section>
-            {/* <form >
-                <h3>Give your review</h3>
-               <div className="row">
-                    <div className="col-md-6">
-                        <div className="form-group mb-3">
-                            <input type="text" name="txtName" className="form-control" placeholder="Your Name *" value="" />
-                        </div>
-                        <div className="form-group">
-                            <input type="text" name="txtEmail" className="form-control" placeholder="Your Email *" value="" />
-                        </div>
-                        <div className="form-group">
-                            <input type="text" name="txtPhone" className="form-control" placeholder="Your Phone Number *" value="" />
-                        </div>
-                        <div className="form-group">
-                            <input type="submit" name="btnSubmit" className="btnContact" value="Send Message" />
-                        </div>
-                    </div>
-                    <div className="col-md-6">
-                        <div className="form-group">
-                            <textarea name="txtMsg" className="form-control" placeholder="Your Message *" style={{width: '100%', height: "150px"}}></textarea>
-                        </div>
-                    </div>
-                </div>
-            </form> */}
         </div>
     );
 };

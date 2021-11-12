@@ -8,7 +8,7 @@ const ManageAllOrder = () => {
     const [control, setConrol] = useState(false);
 
     useEffect(() => {
-        fetch("http://localhost:5000/allOrder")
+        fetch("https://immense-lowlands-25599.herokuapp.com/allOrder")
             .then((res) => res.json())
             .then((data) => setOrder(data));
     }, [control]);
@@ -16,7 +16,7 @@ const ManageAllOrder = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            fetch(`http://localhost:5000/deleteOrder/${id}`, {
+            fetch(`https://immense-lowlands-25599.herokuapp.com/deleteOrder/${id}`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" },
             })
@@ -34,7 +34,7 @@ const ManageAllOrder = () => {
     const handleStatus = (id) => {
         const newStatus = { status: 'Shipped' };
         setStatus(newStatus);
-        fetch(`http://localhost:5000/updateStatus/${id}`, {
+        fetch(`https://immense-lowlands-25599.herokuapp.com/updateStatus/${id}`, {
             method: "PUT",
             headers: {
                 'Content-Type': 'application/json'

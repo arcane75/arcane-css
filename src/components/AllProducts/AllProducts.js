@@ -7,9 +7,9 @@ import useCart from '../../hooks/useCart';
 const AllProducts = () => {
     const [allProducts, setAllProducts] = useState([]);
     const [cart, setCart] = useCart();
-    
+
     useEffect(() => {
-        fetch("http://localhost:5000/explore")
+        fetch("https://immense-lowlands-25599.herokuapp.com/explore")
             .then(res => res.json())
             .then(data => setAllProducts(data));
     }, [])
