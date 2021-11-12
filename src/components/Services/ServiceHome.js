@@ -37,18 +37,21 @@ const ServiceHome = () => {
     }
 
     return (
-        <div className="home-service-container">
-            {services.length === 0 ? <Spinner animation="border" variant="primary" /> :
-                services.map(service =>
-                    <SingleService
-                        key={service._id}
-                        service={service}
-                        handleAddToCart={handleAddToCart}
-                    >
+        <>
+            <div className="home-service-container">
+                {services.length === 0 ? <Spinner animation="border" variant="primary" /> :
+                    services.map(service =>
+                        <SingleService
+                            key={service._id}
+                            service={service}
+                            handleAddToCart={handleAddToCart}
+                        >
+                        </SingleService>
+                    )
+                }
+            </div>
 
-                    </SingleService>)
-            }
-        </div>
+        </>
     );
 };
 

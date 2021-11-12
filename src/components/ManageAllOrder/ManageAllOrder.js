@@ -16,7 +16,7 @@ const ManageAllOrder = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            fetch(`http://localhost:5000/deletePackage/${id}`, {
+            fetch(`http://localhost:5000/deleteOrder/${id}`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" },
             })
@@ -51,11 +51,11 @@ const ManageAllOrder = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container table-responsive">
             <div className="order-text">
-                <h1>Total Order {order?.length}</h1>
+                <h1>Total Orders: {order?.length}</h1>
             </div>
-            <Table striped bordered hover>
+            <Table striped bordered hover className="table">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -70,7 +70,7 @@ const ManageAllOrder = () => {
                     <tbody>
                         <tr>
                             <td>{index + 1}</td>
-                            <td>{pd.Place}</td>
+                            <td>{pd.product}</td>
                             <td>{pd.email}</td>
                             <td>{pd.address}</td>
                             <td>

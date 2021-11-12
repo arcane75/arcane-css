@@ -17,6 +17,7 @@ import Admin from './components/Admin/Admin';
 import Header from './components/Header/Header';
 // import MyOrder from './components/MyOrder/MyOrder';
 import Footer from './components/Footer/Footer';
+import AllProducts from './components/AllProducts/AllProducts';
 
 
 function App() {
@@ -34,6 +35,9 @@ function App() {
               <Home></Home>
             </Route>
 
+            <Route path='/explore'>
+              <AllProducts></AllProducts>
+            </Route>
 
             <Route path="/userlogin">
               <UserLogin></UserLogin>

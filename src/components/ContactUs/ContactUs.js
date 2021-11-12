@@ -10,34 +10,35 @@ const ContactUs = () => {
                     <div className="col-md-3 contact-img">
                         <div className="contact-info">
                             <img src="https://image.ibb.co/kUASdV/contact-image.png" alt="" />
-                            <h2>Contact Us</h2>
+                            <h3>Contact Us</h3>
+                            <br />
                             <h4>We would love to hear from you !</h4>
                         </div>
                     </div>
                     <div className="col-md-9">
                         <div className="contact-form">
                             <div className="form-group">
-                                <label className="title col-sm-2 " for="fname">First Name:</label>
+                                {/* <label className="title col-sm-2 justify-align-left" for="fname">First Name:</label> */}
                                 <div className="col-sm-10">
-                                    <input type="text" className="form-control" id="fname" placeholder="Enter First Name" name="fname" />
+                                    <input type="text" className="form-control mb-2" id="fname" placeholder="Enter First Name" name="fname" />
                                 </div>
                             </div>
                             <div className="form-group">
-                                <label className="col-sm-2" for="lname">Last Name:</label>
+                                {/* <label className="col-sm-2" for="lname">Last Name:</label> */}
                                 <div className="col-sm-10">
-                                    <input type="text" className="form-control" id="lname" placeholder="Enter Last Name" name="lname" />
+                                    <input type="text" className="form-control mb-2" id="lname" placeholder="Enter Last Name" name="lname" />
                                 </div>
                             </div>
                             <div className="form-group">
-                                <label className="col-sm-2" for="email">Email:</label>
+                                {/* <label className="col-sm-2" for="email">Email:</label> */}
                                 <div className="col-sm-10">
-                                    <input type="email" className="form-control" id="email" placeholder="Enter email" name="email" />
+                                    <input type="email" className="form-control mb-2" id="email" placeholder="Enter email" name="email" />
                                 </div>
                             </div>
                             <div className="form-group">
-                                <label className=" col-sm-2" for="comment">Comment:</label>
+                                {/* <label className=" col-sm-2" for="comment">Comment:</label> */}
                                 <div className="col-sm-10">
-                                    <textarea className="form-control" rows="5" id="comment"></textarea>
+                                    <textarea className="form-control" placeholder="Comment:"  rows="5" id="comment"></textarea>
                                 </div>
                             </div>
                             <br />

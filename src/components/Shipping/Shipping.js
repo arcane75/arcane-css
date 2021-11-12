@@ -57,7 +57,7 @@ const Shipping = () => {
                                                 <input placeholder="Address" defaultValue="" {...register("address")} />
                                                 <input placeholder="City" defaultValue="" {...register("city")} />
                                                 <input placeholder="phone number" defaultValue="" {...register("phone")} />
-                                                <input placeholder="Product Name" defaultValue="" {...register("Place")} />
+                                                <input placeholder="Product Name" defaultValue="" {...register("product")} />
 
                                                 <input type="submit" />
                                             </form>
