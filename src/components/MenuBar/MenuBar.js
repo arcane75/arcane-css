@@ -24,17 +24,15 @@ const MenuBar = () => {
                       
                             <NavLink className="pe-5 item" to="/admin"><i className="fas fa-tasks"></i> Dashboard</NavLink>
     
-
                             {(user?.email) ?
-
                                 <Button className="logoutbtn btn-sm" onClick={logOut}>Logout {user?.displayName}</Button>
 
                                 :
-                                <NavLink className="item" to="/userlogin"><i className="fas fa-user"></i> Login
+                                <NavLink className="pe-5 item" to="/userlogin"><i className="fas fa-user"></i> Login
                                 </NavLink>
                             }
 
-                            <NavLink className="ps-5 item" to="/orderReview"><i className="fas fa-cart-arrow-down"></i> Cart</NavLink>
+                            <NavLink className="pe-5 item" to="/orderReview"><i className="fas fa-cart-arrow-down"></i> Cart</NavLink>
 
                         </Nav>
                     </Navbar.Collapse>

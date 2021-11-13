@@ -18,7 +18,7 @@ const MyOrder = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            fetch(`https://immense-lowlands-25599.herokuapp.com/deletePackage/${id}`, {
+            fetch(`https://immense-lowlands-25599.herokuapp.com/deleteOrder/${id}`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" },
             })
@@ -34,12 +34,12 @@ const MyOrder = () => {
     }
 
     return (
-        <div className="container vh-100">
+        <div className="container table-responsive">
             <div className="order-text">
                 <h1 className=''>My Order : {order.length}</h1>
             </div>
             <br />
-            <Table striped bordered hover>
+            <Table striped bordered hover className="table">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -54,7 +54,7 @@ const MyOrder = () => {
                     <tbody>
                         <tr>
                             <td>{index + 1}</td>
-                            <td>{pd.Place}</td>
+                            <td>{pd.product}</td>
                             <td>{pd.email}</td>
                             <td>{pd.address}</td>
                             <td> {pd.status}</td>

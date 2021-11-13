@@ -59,7 +59,7 @@ const ManageAllOrder = () => {
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Package Title</th>
+                        <th>Product Title</th>
                         <th>Email</th>
                         <th>Address</th>
                         <th>Stutus</th>

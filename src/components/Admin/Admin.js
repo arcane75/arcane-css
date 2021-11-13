@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import useAuth from '../../hooks/useAuth';
 import AboutUs from '../AboutUs/AboutUs';
@@ -12,7 +13,7 @@ import ReviewRating from '../Review/ReviewRating';
 import './Admin.css';
 const Admin = () => {
   const [control, setControl] = useState("addProducts");
-  const { admin } = useAuth();
+  const { admin, logOut } = useAuth();
 
   return (
     <div className="admin-container">
@@ -94,6 +95,12 @@ const Admin = () => {
                 <h3>Contact</h3>
               </li>
 
+              <li
+                onClick={logOut}
+                className="admin-menu p-2"
+              >
+                <h3>Logout</h3>
+              </li>
 
             </div>
           </div>
@@ -117,8 +124,7 @@ const Admin = () => {
 
           {control === "about" && <AboutUs></AboutUs>}
           {control === "contact" && <ContactUs></ContactUs>}
-
-
+         
         </div>
       </div>
     </div>
