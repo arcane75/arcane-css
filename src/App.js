@@ -56,7 +56,7 @@ function App() {
               <Shipping></Shipping>
             </PrivateRoute>
 
-            <PrivateRoute path="/admin">
+            <PrivateRoute path="/dashboard">
               <Admin></Admin>
             </PrivateRoute>
 

@@ -16,7 +16,7 @@ const useCart = () => {
         })
             .then(res => res.json())
             .then(products => {
-                
+
                 if (products.length) {
                     const storedCart = [];
                     for (const key in savedCart) {
@@ -31,7 +31,6 @@ const useCart = () => {
                     setCart(storedCart);
                 }
             })
-
 
     }, []);
 

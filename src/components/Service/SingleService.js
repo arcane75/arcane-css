@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './SingleService.css';
 
 const SingleService = (props) => {
-    const { _id, name, img, description, price } = props.service || {};
+    const { name, img, description, price } = props.service || {};
 
     return (
         <>

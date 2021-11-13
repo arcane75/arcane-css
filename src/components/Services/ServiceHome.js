@@ -23,17 +23,14 @@ const ServiceHome = () => {
             const rest = cart.filter(pd => pd.key !== product.key);
             exists.quantity = exists.quantity + 1;
             newCart = [...rest, product];
-            //alert('stop');
         }
         else {
             product.quantity = 1;
             newCart = [...cart, product];
-            //alert('stop');
         }
         setCart(newCart);
         // save to local storage (for now)
         addToDb(product.key);
-
     }
 
     return (

@@ -17,7 +17,7 @@ const Footer = () => {
               <h5 className="text-uppercase mb-4">About company</h5>
 
               <p>
-              We are offering the world's best X-Ray Machines and RVG sensors. By using those updated products your work efficiency goes to the next level.
+                We are offering the world's best X-Ray Machines and RVG sensors. By using those updated products your work efficiency goes to the next level.
               </p>
 
               <p>

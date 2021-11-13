@@ -18,27 +18,23 @@ const ContactUs = () => {
                     <div className="col-md-9">
                         <div className="contact-form">
                             <div className="form-group">
-                                {/* <label className="title col-sm-2 justify-align-left" for="fname">First Name:</label> */}
                                 <div className="col-sm-10">
                                     <input type="text" className="form-control mb-2" id="fname" placeholder="Enter First Name" name="fname" />
                                 </div>
                             </div>
                             <div className="form-group">
-                                {/* <label className="col-sm-2" for="lname">Last Name:</label> */}
                                 <div className="col-sm-10">
                                     <input type="text" className="form-control mb-2" id="lname" placeholder="Enter Last Name" name="lname" />
                                 </div>
                             </div>
                             <div className="form-group">
-                                {/* <label className="col-sm-2" for="email">Email:</label> */}
                                 <div className="col-sm-10">
                                     <input type="email" className="form-control mb-2" id="email" placeholder="Enter email" name="email" />
                                 </div>
                             </div>
                             <div className="form-group">
-                                {/* <label className=" col-sm-2" for="comment">Comment:</label> */}
                                 <div className="col-sm-10">
-                                    <textarea className="form-control" placeholder="Comment:"  rows="5" id="comment"></textarea>
+                                    <textarea className="form-control" placeholder="Comment:" rows="5" id="comment"></textarea>
                                 </div>
                             </div>
                             <br />
@@ -51,8 +47,6 @@ const ContactUs = () => {
                     </div>
                 </div>
             </div>
-
-
         </div>
     );
 };

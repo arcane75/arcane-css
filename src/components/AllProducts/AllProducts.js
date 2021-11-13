@@ -3,7 +3,7 @@ import { Spinner } from 'react-bootstrap';
 import AllProduct from '../AllProduct/AllProduct';
 import { addToDb } from '../../utilities/fakedb';
 import useCart from '../../hooks/useCart';
-
+import Brand from '../Brand/Brand';
 const AllProducts = () => {
     const [allProducts, setAllProducts] = useState([]);
     const [cart, setCart] = useCart();
@@ -21,28 +21,26 @@ const AllProducts = () => {
             const rest = cart.filter(pd => pd.key !== product.key);
             exists.quantity = exists.quantity + 1;
             newCart = [...rest, product];
-            //alert('stop');
         }
         else {
             product.quantity = 1;
             newCart = [...cart, product];
-            //alert('stop');
         }
         setCart(newCart);
         // save to local storage (for now)
         addToDb(product.key);
-
     }
 
     return (
         <div>
-             <div className="home-service-container">
+            <Brand></Brand>
+            <div className="home-service-container">
                 {allProducts.length === 0 ? <Spinner animation="border" variant="primary" /> :
                     allProducts.map(allProduct =>
                         <AllProduct
                             key={allProduct._id}
                             allProduct={allProduct}
-                            handleAddToCart = {handleAddToCart}
+                            handleAddToCart={handleAddToCart}
                         >
                         </AllProduct>
                     )

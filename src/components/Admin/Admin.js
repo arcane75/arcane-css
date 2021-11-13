@@ -124,7 +124,7 @@ const Admin = () => {
 
           {control === "about" && <AboutUs></AboutUs>}
           {control === "contact" && <ContactUs></ContactUs>}
-         
+
         </div>
       </div>
     </div>

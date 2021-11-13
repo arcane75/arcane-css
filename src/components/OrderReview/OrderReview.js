@@ -25,8 +25,7 @@ const OrderReview = () => {
     const handleProceedToShipping = () => {
         history.push('/shipping');
     }
-    // className="product-container"
-    // className="cart-container"
+   
     return (
         <div className="container">
            <div className="row">

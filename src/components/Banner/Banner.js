@@ -12,15 +12,15 @@ const Banner = () => {
         <Carousel autoPlay className=" ">
             <div>
                 <img className="img-fluid" src={banner1} alt="" />
-                <p className="legend">Explore the nature</p>
+                <p className="legend">Runyes Portable X-Ray</p>
             </div>
             <div>
                 <img className="img-fluid" src={banner2} alt="" />
-                <p className="legend">Sea view nature</p>
+                <p className="legend">Eighteeth Nanopix</p>
             </div>
             <div>
                 <img className="img-fluid" src={banner3} alt="" />
-                <p className="legend">Maldives Land</p>
+                <p className="legend">Rextr X X-Ray</p>
             </div>
         </Carousel>
         </div>

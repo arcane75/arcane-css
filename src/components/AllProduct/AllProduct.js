@@ -3,9 +3,10 @@ import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const AllProduct = (props) => {
-    const { _id, name, img, description, price } = props.allProduct || {};
+    const { name, img, description, price } = props.allProduct || {};
     return (
         <>
+    
             <div className="home-service">
                 <div >
                     <img src={img} alt=" " />
