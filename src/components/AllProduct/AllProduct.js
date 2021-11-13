@@ -6,7 +6,6 @@ const AllProduct = (props) => {
     const { name, img, description, price } = props.allProduct || {};
     return (
         <>
-    
             <div className="home-service">
                 <div >
                     <img src={img} alt=" " />

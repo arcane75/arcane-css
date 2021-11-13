@@ -9,7 +9,7 @@ const AllProducts = () => {
     const [cart, setCart] = useCart();
 
     useEffect(() => {
-        fetch("https://immense-lowlands-25599.herokuapp.com/explore")
+        fetch("https://immense-lowlands-25599.herokuapp.com/products")
             .then(res => res.json())
             .then(data => setAllProducts(data));
     }, [])

@@ -37,7 +37,7 @@ const ServiceHome = () => {
         <>
             <div className="home-service-container">
                 {services.length === 0 ? <Spinner animation="border" variant="primary" /> :
-                    services.map(service =>
+                    services.slice(0,6).map(service =>
                         <SingleService
                             key={service._id}
                             service={service}
